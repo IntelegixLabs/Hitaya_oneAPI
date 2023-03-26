@@ -1,0 +1,11 @@
+tensorflow
+fastapi
+Pillow
+starlette
+gunicorn
+uvicorn
+python-multipart
+easyocr
+scipy
+scikit-learn
+Flask
