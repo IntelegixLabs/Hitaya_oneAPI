@@ -1,1 +1,1 @@
-# Hitaya_OneAPI
+# Hitaya OneAPI
