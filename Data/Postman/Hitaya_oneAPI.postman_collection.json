@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "200ffae1-c788-4d06-82bc-a49c252f540a",
+		"name": "Hitaya_oneAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8661183"
+	},
+	"item": [
+		{
+			"name": "Diabetic Prediction (Tabular)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Pregnancies\": 2,\r\n    \"Glucose\": 138,\r\n    \"BloodPressure\": 62,\r\n    \"SkinThickness\": 35,\r\n    \"Insulin\": 0,\r\n    \"BMI\": 33.6,\r\n    \"DiabetesPedigreeFunction\": 0.127\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/diabetic",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"diabetic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Breast Cancer Prediction (Tabular)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"radius_mean\": 17.99,\r\n    \"texture_mean\": 10.38,\r\n    \"perimeter_mean\": 122.8,\r\n    \"area_mean\": 1001,\r\n    \"smoothness_mean\": 0.1184,\r\n    \"compactness_mean\": 0.2776,\r\n    \"concavity_mean\": 0.3001,\r\n    \"concave_points_mean\": 0.1471,\r\n    \"symmetry_mean\": 0.2419,\r\n    \"fractal_dimension_mean\": 0.07871,\r\n    \"radius_se\": 1.095,\r\n    \"texture_se\": 0.9053,\r\n    \"perimeter_se\": 8.589,\r\n    \"area_se\": 153.4,\r\n    \"smoothness_se\": 0.006399,\r\n    \"compactness_se\": 0.04904,\r\n    \"concavity_se\": 0.05373,\r\n    \"concave_points_se\": 0.01587,\r\n    \"symmetry_se\": 0.03003,\r\n    \"fractal_dimension_se\": 0.006193,\r\n    \"radius_worst\": 25.38,\r\n    \"texture_worst\": 17.33,\r\n    \"perimeter_worst\": 184.6,\r\n    \"area_worst\": 2019,\r\n    \"smoothness_worst\": 0.1622,\r\n    \"compactness_worst\": 0.6656,\r\n    \"concavity_worst\": 0.7119,\r\n    \"concave_points_worst\": 0.2654,\r\n    \"symmetry_worst\": 0.4601,\r\n    \"fractal_dimension_worst\": 0.1189\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/breast_cancer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"breast_cancer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Heart Risk Predictor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gender\": 1,\r\n    \"age\": 61,\r\n    \"currentSmoker\": 1,\r\n    \"cigsPerDay\":\t30.0,\r\n    \"BPMeds\":\t0.0,\r\n    \"prevalentStroke\": 0,\r\n    \"prevalentHyp\": 0,\r\n    \"diabetes\": 1,\r\n    \"totChol\":225.0,\t\r\n    \"sysBP\": 150.0,\r\n    \"diaBP\": 95.0,\r\n    \"BMI\": 28.58,\r\n    \"heartRate\": 65.0,\r\n    \"glucose\": 103.0,\r\n    \"TenYearCHD\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/heartrisk",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"heartrisk"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
