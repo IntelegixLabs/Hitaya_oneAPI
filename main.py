@@ -1,12 +1,34 @@
 from flask_cors import CORS
 from flask import Flask, request, jsonify
+from flask_restful import Resource, Api
+from flask_swagger_ui import get_swaggerui_blueprint
 
 from data_models.diabetic import diabetic
 
+import json
 import pickle
 
 # webserver gateway interphase (WSGI)
 app = Flask(__name__)
+api = Api(app)
+
+# Configure Swagger UI
+SWAGGER_URL = '/swagger1'
+API_URL = '/swagger1.json'
+swaggerui_blueprint = get_swaggerui_blueprint(
+    SWAGGER_URL,
+    API_URL,
+    config={
+        'app_name': "Sample API"
+    }
+)
+app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
+
+
+@app.route('/swagger1.json')
+def swagger():
+    with open('swagger1.json', 'r') as f:
+        return jsonify(json.load(f))
 
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
