@@ -18,6 +18,9 @@ classifier_diabetic = pickle.load(pickle_diabetic)
 pickle_breast_cancer = open("models/breast_cancer.pkl", "rb")
 classifier_breast_cancer = pickle.load(pickle_breast_cancer)
 
+pickle_chronic_kidney = open("models/chronic_kidney.pkl", "rb")
+classifier_chronic_kidney = pickle.load(pickle_chronic_kidney)
+
 
 @app.route('/api/v1/breast_cancer', methods=['POST'])
 def breast_cancer():
@@ -71,6 +74,47 @@ def breast_cancer():
             return jsonify("Malignant")
         else:
             return jsonify("Benign")
+
+
+@app.route('/api/v1/kidney_chronic', methods=['POST'])
+def kidney_chronic():
+    if request.method == 'POST':
+
+        data = request.get_json(force=True)
+
+        age = data["age"]
+        bp = data["bp"]
+        sg = data["sg"]
+        al = data["al"]
+        su = data["su"]
+        rbc = data["rbc"]
+        pc = data["pc"]
+        pcc = data["pcc"]
+        ba = data["ba"]
+        bgr = data["bgr"]
+        bu = data["bu"]
+        sc = data["sc"]
+        sod = data["sod"]
+        pot = data["pot"]
+        hemo = data["hemo"]
+        pcv = data["pcv"]
+        wc = data["wc"]
+        rc = data["rc"]
+        htn = data["htn"]
+        dm = data["dm"]
+        cad = data["cad"]
+        appet = data["appet"]
+        pe = data["pe"]
+        ane = data["ane"]
+
+        prediction = classifier_chronic_kidney.predict(
+            [[age, bp, sg, al, su, rbc, pc, pcc, ba, bgr, bu, sc, sod, pot, hemo, pcv, wc, rc, htn, dm, cad, appet, pe,
+              ane]])
+
+        if prediction[0] == 1:
+            return jsonify("Chronic Kidney Disease")
+        else:
+            return jsonify("Not Chronic Kidney Disease")
 
 
 @app.route('/api/v1/diabetic', methods=['POST'])
