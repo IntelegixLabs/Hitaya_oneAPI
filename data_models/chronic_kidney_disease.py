@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class breast_cancer(BaseModel):
+class chronic_kidney_disease(BaseModel):
     age: float
     bp: float
     sg: float
