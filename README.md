@@ -2,9 +2,6 @@
 
 <h1 align="center"><a href="">Hitaya oneAPI</h1>
 
-## Features
--  Mobile/Desktop Application.
-
 
 
 
@@ -13,3 +10,14 @@
 <p align="center">
   <img src="Data/HITAYA_ONE_API.png" />
 </p>
+
+
+## 2. Getting Started With The Application
+
+- Clone the repo and cd into the directory
+```sh
+$ git clone https://github.com/IntelegixLabs/Hitaya_oneAPI.git
+$ cd Hitaya_oneAPI
+$ pip install -r requirements.txt
+$ python main.py
+```
