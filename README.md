@@ -10,7 +10,6 @@
 
 ## 2. Getting Started With The Application
 
-- Clone the repo and cd into the directory
 ```sh
 $ git clone https://github.com/IntelegixLabs/Hitaya_oneAPI.git
 $ cd Hitaya_oneAPI
