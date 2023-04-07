@@ -21,6 +21,9 @@ classifier_breast_cancer = pickle.load(pickle_breast_cancer)
 pickle_chronic_kidney = open("models/chronic_kidney.pkl", "rb")
 classifier_chronic_kidney = pickle.load(pickle_chronic_kidney)
 
+pickle_heart_disease = open("models/heart_disease.pkl", "rb")
+classifier_heart_disease = pickle.load(pickle_heart_disease)
+
 
 @app.route('/api/v1/breast_cancer', methods=['POST'])
 def breast_cancer():
@@ -139,6 +142,35 @@ def diabetic():
             return jsonify("Diabetic")
         else:
             return jsonify("Not Diabetic")
+
+
+@app.route('/api/v1/heart_disease', methods=['POST'])
+def heart_disease():
+    if request.method == 'POST':
+
+        data = request.get_json(force=True)
+
+        age = data["age"]
+        sex = data["sex"]
+        cp = data["cp"]
+        trestbps = data["trestbps"]
+        chol = data["chol"]
+        fbs = data["fbs"]
+        restecg = data["restecg"]
+        thalach = data["thalach"]
+        exang = data["exang"]
+        oldpeak = data["oldpeak"]
+        slope = data["slope"]
+        ca = data["ca"]
+        thal = data["thal"]
+
+        prediction = classifier_heart_disease.predict(
+            [[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
+
+        if prediction[0] == 1:
+            return jsonify("Heart Disease")
+        else:
+            return jsonify("No Heart Disease")
 
 
 if __name__ == "__main__":
