@@ -1,8 +1,4 @@
-# Hitaya OneAPI
-
-<h1 align="center"><a href="">Hitaya oneAPI</h1>
-
-
+<h1 align="center"><a href="">Hitaya OneAPI</h1>
 
 
 ## 1. Project Architecture
