@@ -24,6 +24,9 @@ classifier_chronic_kidney = pickle.load(pickle_chronic_kidney)
 pickle_heart_disease = open("models/heart_disease.pkl", "rb")
 classifier_heart_disease = pickle.load(pickle_heart_disease)
 
+pickle_liver_disease = open("models/liver.pkl", "rb")
+classifier_liver_disease = pickle.load(pickle_liver_disease)
+
 
 @app.route('/api/v1/breast_cancer', methods=['POST'])
 def breast_cancer():
@@ -171,6 +174,35 @@ def heart_disease():
             return jsonify("Heart Disease")
         else:
             return jsonify("No Heart Disease")
+
+
+@app.route('/api/v1/liver_disease', methods=['POST'])
+def liver_disease():
+    if request.method == 'POST':
+
+        data = request.get_json(force=True)
+
+        Age = data["Age"]
+        Gender_Female = data["Gender_Female"]
+        Gender_Male = data["Gender_Male"]
+        Total_Bilirubin = data["Total_Bilirubin"]
+        Direct_Bilirubin = data["Direct_Bilirubin"]
+        Alkaline_Phosphotase = data["Alkaline_Phosphotase"]
+        Alamine_Aminotransferase = data["Alamine_Aminotransferase"]
+        Aspartate_Aminotransferase = data["Aspartate_Aminotransferase"]
+        Total_Protiens = data["Total_Protiens"]
+        Albumin = data["Albumin"]
+        Albumin_and_Globulin_Ratio = data["Albumin_and_Globulin_Ratio"]
+
+        prediction = classifier_liver_disease.predict(
+            [[Age, Gender_Female, Gender_Male, Total_Bilirubin, Direct_Bilirubin, Alkaline_Phosphotase,
+              Alamine_Aminotransferase, Aspartate_Aminotransferase, Total_Protiens, Albumin,
+              Albumin_and_Globulin_Ratio]])
+
+        if prediction[0] == 1:
+            return jsonify("Liver Disease")
+        else:
+            return jsonify("No Liver Disease")
 
 
 if __name__ == "__main__":
