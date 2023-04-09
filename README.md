@@ -1,4 +1,4 @@
-<h1 align="center"><a href="">Hitaya OneAPI</h1>
+<h1 align="center"><a href="">Hitaya oneAPI</h1>
 
 
 ## 1. Project Architecture
@@ -14,5 +14,5 @@
 $ git clone https://github.com/IntelegixLabs/Hitaya_oneAPI.git
 $ cd Hitaya_oneAPI
 $ pip install -r requirements.txt
-$ python main.py
+$ python app.py
 ```

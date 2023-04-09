@@ -1,0 +1,43 @@
+2023-04-09 16:50:52,424 INFO werkzeug  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.251.52.165:5000
+2023-04-09 16:50:52,424 INFO werkzeug  : [33mPress CTRL+C to quit[0m
+2023-04-09 16:50:52,431 INFO werkzeug  :  * Restarting with stat
+2023-04-09 16:50:52,899 WARNING werkzeug  :  * Debugger is active!
+2023-04-09 16:50:52,908 INFO werkzeug  :  * Debugger PIN: 164-339-872
+2023-04-09 16:50:59,252 INFO root  : Request came for Disease - diabetic
+2023-04-09 16:51:00,970 INFO werkzeug  : 127.0.0.1 - - [09/Apr/2023 16:51:00] "POST /hitaya/v1/disease HTTP/1.1" 200 -
+2023-04-09 16:51:31,150 INFO werkzeug  :  * Detected change in 'D:\\Hitaya_oneAPI-main\\app.py', reloading
+2023-04-09 16:51:31,290 INFO werkzeug  :  * Restarting with stat
+2023-04-09 16:51:31,766 WARNING werkzeug  :  * Debugger is active!
+2023-04-09 16:51:31,775 INFO werkzeug  :  * Debugger PIN: 164-339-872
+2023-04-09 16:51:35,925 INFO werkzeug  :  * Detected change in 'D:\\Hitaya_oneAPI-main\\app.py', reloading
+2023-04-09 16:51:35,958 INFO werkzeug  :  * Restarting with stat
+2023-04-09 16:51:36,441 WARNING  :  * Debugger is active!
+2023-04-09 16:51:36,451 INFO  :  * Debugger PIN: 164-339-872
+2023-04-09 16:52:25,318 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.251.52.165:5000
+2023-04-09 16:52:25,318 INFO  : [33mPress CTRL+C to quit[0m
+2023-04-09 16:52:25,324 INFO  :  * Restarting with stat
+2023-04-09 16:52:25,794 WARNING  :  * Debugger is active!
+2023-04-09 16:52:25,803 INFO  :  * Debugger PIN: 164-339-872
+2023-04-09 16:52:30,347 INFO  : Request came for Disease - diabetic
+2023-04-09 16:52:32,069 INFO  : Prediction for Disease - Diabetic
+2023-04-09 16:52:32,071 INFO  : 127.0.0.1 - - [09/Apr/2023 16:52:32] "POST /hitaya/v1/disease HTTP/1.1" 200 -
+2023-04-09 18:06:58,251 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.101:5000
+2023-04-09 18:06:58,252 INFO  : [33mPress CTRL+C to quit[0m
+2023-04-09 18:06:58,260 INFO  :  * Restarting with stat
+2023-04-09 18:06:58,853 WARNING  :  * Debugger is active!
+2023-04-09 18:06:58,866 INFO  :  * Debugger PIN: 164-339-872
+2023-04-09 18:10:40,698 INFO  : Request came for Disease - diabetic
+2023-04-09 18:10:44,319 INFO  : Prediction for Disease - Diabetic
+2023-04-09 18:10:44,320 INFO  : 127.0.0.1 - - [09/Apr/2023 18:10:44] "POST /hitaya/v1/disease HTTP/1.1" 200 -
+2023-04-09 18:11:32,440 INFO  : Request came for Disease - heart_disease
+2023-04-09 18:11:32,510 INFO  : Prediction for Disease - Heart Disease
+2023-04-09 18:11:32,510 INFO  : 127.0.0.1 - - [09/Apr/2023 18:11:32] "POST /hitaya/v1/disease HTTP/1.1" 200 -
