@@ -1,7 +1,7 @@
 from flask_cors import CORS
 from flask import Flask, request, jsonify
 
-from lightgbm import LGBMClassifier
+# from lightgbm import LGBMClassifier
 
 from data_models.diabetic import diabetic
 
