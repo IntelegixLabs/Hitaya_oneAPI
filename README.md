@@ -4,7 +4,7 @@
 ## 1. Project Architecture
 
 <p align="center">
-  <img src="Data/HITAYA_ONE_API.png" />
+  <img src="data/HITAYA_ONE_API.png" />
 </p>
 
 
