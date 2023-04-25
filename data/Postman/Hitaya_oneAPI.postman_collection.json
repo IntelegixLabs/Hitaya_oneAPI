@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "200ffae1-c788-4d06-82bc-a49c252f540a",
+		"name": "Hitaya_oneAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8661183"
+	},
+	"item": [
+		{
+			"name": "Diabetic Prediction (Tabular)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"disease\":\"diabetic\",\r\n    \"parameters\":{\r\n        \"Pregnancies\": 2,\r\n        \"Glucose\": 138,\r\n        \"BloodPressure\": 62,\r\n        \"SkinThickness\": 35,\r\n        \"Insulin\": 0,\r\n        \"BMI\": 33.6,\r\n        \"DiabetesPedigreeFunction\": 0.127,\r\n        \"Age\": 45\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Breast Cancer Prediction (Tabular)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"disease\":\"breast_cancer\",\r\n    \"parameters\":{\r\n        \"radius_mean\": 17.99,\r\n        \"texture_mean\": 10.38,\r\n        \"perimeter_mean\": 122.8,\r\n        \"area_mean\": 1001,\r\n        \"smoothness_mean\": 0.1184,\r\n        \"compactness_mean\": 0.2776,\r\n        \"concavity_mean\": 0.3001,\r\n        \"concave_points_mean\": 0.1471,\r\n        \"symmetry_mean\": 0.2419,\r\n        \"fractal_dimension_mean\": 0.07871,\r\n        \"radius_se\": 1.095,\r\n        \"texture_se\": 0.9053,\r\n        \"perimeter_se\": 8.589,\r\n        \"area_se\": 153.4,\r\n        \"smoothness_se\": 0.006399,\r\n        \"compactness_se\": 0.04904,\r\n        \"concavity_se\": 0.05373,\r\n        \"concave_points_se\": 0.01587,\r\n        \"symmetry_se\": 0.03003,\r\n        \"fractal_dimension_se\": 0.006193,\r\n        \"radius_worst\": 25.38,\r\n        \"texture_worst\": 17.33,\r\n        \"perimeter_worst\": 184.6,\r\n        \"area_worst\": 2019,\r\n        \"smoothness_worst\": 0.1622,\r\n        \"compactness_worst\": 0.6656,\r\n        \"concavity_worst\": 0.7119,\r\n        \"concave_points_worst\": 0.2654,\r\n        \"symmetry_worst\": 0.4601,\r\n        \"fractal_dimension_worst\": 0.1189\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chronic Kidney Disease (Tabular)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"disease\":\"chronic_kidney\",\r\n    \"parameters\":{\r\n        \"age\": 48,\r\n        \"bp\": 80,\r\n        \"sg\": 1.02,\r\n        \"al\": 1,\r\n        \"su\": 0,\r\n        \"rbc\": 1,\r\n        \"pc\": 1,\r\n        \"pcc\": 0,\r\n        \"ba\": 0,\r\n        \"bgr\": 121,\r\n        \"bu\": 36,\r\n        \"sc\": 1.2,\r\n        \"sod\": 100,\r\n        \"pot\": 2.5,\r\n        \"hemo\": 15.4,\r\n        \"pcv\": 44,\r\n        \"wc\": 7800,\r\n        \"rc\": 5.2,\r\n        \"htn\": 1,\r\n        \"dm\": 1,\r\n        \"cad\": 0,\r\n        \"appet\": 1,\r\n        \"pe\": 0,\r\n        \"ane\": 0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Heart Disease (Tabular)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"disease\":\"heart_disease\",\r\n    \"parameters\":{\r\n        \"age\": 58,\r\n        \"sex\": 1,\r\n        \"cp\": 2,\r\n        \"trestbps\": 140,\r\n        \"chol\": 211,\r\n        \"fbs\": 1,\r\n        \"restecg\": 0,\r\n        \"thalach\": 165,\r\n        \"exang\": 0,\r\n        \"oldpeak\": 0,\r\n        \"slope\": 2,\r\n        \"ca\": 0,\r\n        \"thal\": 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liver Disease (Tabular)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"disease\":\"liver_disease\",\r\n    \"parameters\":{\r\n        \"Age\": 65,\r\n        \"Gender_Female\": 0,\r\n        \"Gender_Male\": 1,\r\n        \"Total_Bilirubin\": 0.9,\r\n        \"Direct_Bilirubin\": 0.3, \r\n        \"Alkaline_Phosphotase\": 310,\r\n        \"Alamine_Aminotransferase\": 61,\r\n        \"Aspartate_Aminotransferase\": 58,\r\n        \"Total_Protiens\": 7,\r\n        \"Albumin\": 3.4,\r\n        \"Albumin_and_Globulin_Ratio\": 0.9 \r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:5000/hitaya/api/v1/disease",
+			"type": "string"
+		}
+	]
+}
