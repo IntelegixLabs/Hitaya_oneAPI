@@ -13,7 +13,6 @@ import APP_Constants as AC
 from modules.helper.support import get_classifier
 
 
-
 def get_response(diseaseparameter):
 
     classifier_chronic_kidney = get_classifier(disease="chronic_kidney")

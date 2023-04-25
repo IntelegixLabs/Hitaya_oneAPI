@@ -15,7 +15,6 @@ import APP_Constants as AC
 from modules.helper.support import get_classifier
 
 
-
 def get_response(diseaseparameter):
     classifier_heart_disease = get_classifier(disease="heart_disease")
     age = diseaseparameter["age"]

@@ -1,2 +1,2 @@
 
-APP_ENDPOINT = "/hitaya/v1/"
+APP_ENDPOINT = "/hitaya/api/v1/"

@@ -1,7 +1,7 @@
 ##########To add PYTHON PATH to make sure All Module Loads ########## 
 import os
 import sys
-path = os.path.abspath(os.path.join(os.getcwd(),"../"))
+path = os.path.abspath(os.path.join(os.getcwd(), "../"))
 sys.path.append(path)
 
 ####### Importing Library for Works ###########
@@ -11,7 +11,6 @@ import logging
 import APP_Constants as AC
 
 from modules.helper.support import get_classifier
-
 
 
 def get_response(diseaseparameter):

@@ -22,7 +22,7 @@ from modules.helper.support import get_disease_response
 
 ######## Creating Blueprint for all APIs #########
 
-disease_Blueprint = Blueprint('disease_Blueprint',__name__)
+disease_Blueprint = Blueprint('disease_Blueprint', __name__)
 
 
 
@@ -38,9 +38,9 @@ def disease():
     """
     try:
         inputpayload =  request.get_json(cache= False)
-        logging.info("Request came for Disease - %s",inputpayload['disease'])
-        result = get_disease_response(disease=inputpayload['disease'],diseaseparameter=inputpayload['parameters'])
-        logging.info("Prediction for Disease - %s",result)
+        logging.info("Request came for Disease - %s", inputpayload['disease'])
+        result = get_disease_response(disease=inputpayload['disease'], diseaseparameter=inputpayload['parameters'])
+        logging.info("Prediction for Disease - %s", result)
         return jsonify(result), status.HTTP_200_OK
     except Exception as err:
         return jsonify(f"Module - Error - {err}"), status.HTTP_400_BAD_REQUEST
