@@ -1,103 +1,35 @@
-2023-04-09 16:50:52,424 INFO werkzeug  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
+2023-04-28 21:56:30,228 INFO  :  * Restarting with stat
+2023-04-28 21:56:31,690 WARNING  :  * Debugger is active!
+2023-04-28 21:56:31,693 INFO  :  * Debugger PIN: 701-778-870
+2023-04-28 21:57:42,780 INFO  :  * Detected change in 'C:\\Users\\raj71\\Desktop\\Intelegix Labs\\Hitaya_oneAPI\\modules\\diseases\\chest_xray.py', reloading
+2023-04-28 21:57:43,031 INFO  :  * Restarting with stat
+2023-04-28 21:57:49,581 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
- * Running on http://10.251.52.165:5000
-2023-04-09 16:50:52,424 INFO werkzeug  : [33mPress CTRL+C to quit[0m
-2023-04-09 16:50:52,431 INFO werkzeug  :  * Restarting with stat
-2023-04-09 16:50:52,899 WARNING werkzeug  :  * Debugger is active!
-2023-04-09 16:50:52,908 INFO werkzeug  :  * Debugger PIN: 164-339-872
-2023-04-09 16:50:59,252 INFO root  : Request came for Disease - diabetic
-2023-04-09 16:51:00,970 INFO werkzeug  : 127.0.0.1 - - [09/Apr/2023 16:51:00] "POST /hitaya/v1/disease HTTP/1.1" 200 -
-2023-04-09 16:51:31,150 INFO werkzeug  :  * Detected change in 'D:\\Hitaya_oneAPI-main\\app.py', reloading
-2023-04-09 16:51:31,290 INFO werkzeug  :  * Restarting with stat
-2023-04-09 16:51:31,766 WARNING werkzeug  :  * Debugger is active!
-2023-04-09 16:51:31,775 INFO werkzeug  :  * Debugger PIN: 164-339-872
-2023-04-09 16:51:35,925 INFO werkzeug  :  * Detected change in 'D:\\Hitaya_oneAPI-main\\app.py', reloading
-2023-04-09 16:51:35,958 INFO werkzeug  :  * Restarting with stat
-2023-04-09 16:51:36,441 WARNING  :  * Debugger is active!
-2023-04-09 16:51:36,451 INFO  :  * Debugger PIN: 164-339-872
-2023-04-09 16:52:25,318 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
+2023-04-28 21:57:49,583 INFO  : [33mPress CTRL+C to quit[0m
+2023-04-28 21:57:49,585 INFO  :  * Restarting with stat
+2023-04-28 21:57:51,139 WARNING  :  * Debugger is active!
+2023-04-28 21:57:51,142 INFO  :  * Debugger PIN: 701-778-870
+2023-04-28 21:58:14,668 INFO  : YOLOR  2023-4-28 torch 1.11.0+cu113 CUDA:cuda (NVIDIA GeForce RTX 3050 Laptop GPU, 4095.5MB)
+
+2023-04-28 21:58:16,729 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
+2023-04-28 21:58:18,391 INFO  : 127.0.0.1 - - [28/Apr/2023 21:58:18] "POST /hitaya/api/v1/disease/predictImage HTTP/1.1" 200 -
+2023-04-28 21:58:21,325 INFO  : 127.0.0.1 - - [28/Apr/2023 21:58:21] "GET /static/predict/prediction_image.jpg HTTP/1.1" 200 -
+2023-04-28 21:58:51,138 INFO  : 127.0.0.1 - - [28/Apr/2023 21:58:51] "GET /static/predict/prediction_image.jpg HTTP/1.1" 200 -
+2023-04-28 21:59:34,355 INFO  : YOLOR  2023-4-28 torch 1.11.0+cu113 CUDA:cuda (NVIDIA GeForce RTX 3050 Laptop GPU, 4095.5MB)
+
+2023-04-28 21:59:34,720 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
+2023-04-28 21:59:34,842 INFO  : 127.0.0.1 - - [28/Apr/2023 21:59:34] "POST /hitaya/api/v1/disease/predictImage HTTP/1.1" 200 -
+2023-04-28 21:59:37,396 INFO  : 127.0.0.1 - - [28/Apr/2023 21:59:37] "GET /static/predict/prediction_image.jpg HTTP/1.1" 200 -
+2023-04-28 22:01:34,152 INFO  :  * Detected change in 'C:\\Users\\raj71\\Desktop\\Intelegix Labs\\Hitaya_oneAPI\\modules\\diseases\\chest_xray.py', reloading
+2023-04-28 22:01:34,819 INFO  :  * Restarting with stat
+2023-04-28 22:01:39,785 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
- * Running on http://10.251.52.165:5000
-2023-04-09 16:52:25,318 INFO  : [33mPress CTRL+C to quit[0m
-2023-04-09 16:52:25,324 INFO  :  * Restarting with stat
-2023-04-09 16:52:25,794 WARNING  :  * Debugger is active!
-2023-04-09 16:52:25,803 INFO  :  * Debugger PIN: 164-339-872
-2023-04-09 16:52:30,347 INFO  : Request came for Disease - diabetic
-2023-04-09 16:52:32,069 INFO  : Prediction for Disease - Diabetic
-2023-04-09 16:52:32,071 INFO  : 127.0.0.1 - - [09/Apr/2023 16:52:32] "POST /hitaya/v1/disease HTTP/1.1" 200 -
-2023-04-09 18:06:58,251 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.0.101:5000
-2023-04-09 18:06:58,252 INFO  : [33mPress CTRL+C to quit[0m
-2023-04-09 18:06:58,260 INFO  :  * Restarting with stat
-2023-04-09 18:06:58,853 WARNING  :  * Debugger is active!
-2023-04-09 18:06:58,866 INFO  :  * Debugger PIN: 164-339-872
-2023-04-09 18:10:40,698 INFO  : Request came for Disease - diabetic
-2023-04-09 18:10:44,319 INFO  : Prediction for Disease - Diabetic
-2023-04-09 18:10:44,320 INFO  : 127.0.0.1 - - [09/Apr/2023 18:10:44] "POST /hitaya/v1/disease HTTP/1.1" 200 -
-2023-04-09 18:11:32,440 INFO  : Request came for Disease - heart_disease
-2023-04-09 18:11:32,510 INFO  : Prediction for Disease - Heart Disease
-2023-04-09 18:11:32,510 INFO  : 127.0.0.1 - - [09/Apr/2023 18:11:32] "POST /hitaya/v1/disease HTTP/1.1" 200 -
-2023-04-25 20:39:11,759 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.2:5000
-2023-04-25 20:39:11,760 INFO  : [33mPress CTRL+C to quit[0m
-2023-04-25 20:39:11,761 INFO  :  * Restarting with stat
-2023-04-25 20:39:12,007 WARNING  :  * Debugger is active!
-2023-04-25 20:39:12,012 INFO  :  * Debugger PIN: 701-778-870
-2023-04-25 20:39:39,099 INFO  : 127.0.0.1 - - [25/Apr/2023 20:39:39] "[33mPOST /api/v1/diabetic HTTP/1.1[0m" 404 -
-2023-04-25 20:39:41,161 INFO  : 127.0.0.1 - - [25/Apr/2023 20:39:41] "[33mPOST /api/v1/diabetic HTTP/1.1[0m" 404 -
-2023-04-25 20:40:10,156 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.2:5000
-2023-04-25 20:40:10,157 INFO  : [33mPress CTRL+C to quit[0m
-2023-04-25 20:40:10,158 INFO  :  * Restarting with stat
-2023-04-25 20:40:10,390 WARNING  :  * Debugger is active!
-2023-04-25 20:40:10,394 INFO  :  * Debugger PIN: 701-778-870
-2023-04-25 20:41:17,079 INFO  : 127.0.0.1 - - [25/Apr/2023 20:41:17] "[33mPOST /hitaya/api/v1/diabetic HTTP/1.1[0m" 404 -
-2023-04-25 20:41:44,876 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.2:5000
-2023-04-25 20:41:44,877 INFO  : [33mPress CTRL+C to quit[0m
-2023-04-25 20:41:44,878 INFO  :  * Restarting with stat
-2023-04-25 20:41:45,116 WARNING  :  * Debugger is active!
-2023-04-25 20:41:45,120 INFO  :  * Debugger PIN: 701-778-870
-2023-04-25 20:42:22,539 INFO  : 127.0.0.1 - - [25/Apr/2023 20:42:22] "[33mPOST /hitaya/api/v1/diabetic HTTP/1.1[0m" 404 -
-2023-04-25 20:43:31,615 INFO  :  * Detected change in 'C:\\Users\\raj71\\Desktop\\Intelegix Labs\\Hitaya_oneAPI\\app.py', reloading
-2023-04-25 20:43:31,638 INFO  :  * Restarting with stat
-2023-04-25 20:43:31,864 WARNING  :  * Debugger is active!
-2023-04-25 20:43:31,868 INFO  :  * Debugger PIN: 701-778-870
-2023-04-25 20:43:34,285 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2023-04-25 20:43:34,285 INFO  : [33mPress CTRL+C to quit[0m
-2023-04-25 20:43:34,286 INFO  :  * Restarting with stat
-2023-04-25 20:43:34,522 WARNING  :  * Debugger is active!
-2023-04-25 20:43:34,526 INFO  :  * Debugger PIN: 701-778-870
-2023-04-25 20:43:45,949 INFO  : 127.0.0.1 - - [25/Apr/2023 20:43:45] "[33mPOST /hitaya/api/v1/diabetic HTTP/1.1[0m" 404 -
-2023-04-25 20:44:15,097 INFO  : 127.0.0.1 - - [25/Apr/2023 20:44:15] "[33mPOST /hitaya/api/v1/diabetic HTTP/1.1[0m" 404 -
-2023-04-25 20:45:58,939 INFO  : Request came for Disease - diabetic
-2023-04-25 20:47:33,228 INFO  : Prediction for Disease - Diabetic
-2023-04-25 20:47:33,229 INFO  : 127.0.0.1 - - [25/Apr/2023 20:47:33] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
-2023-04-25 20:48:07,567 INFO  : Request came for Disease - diabetic
-2023-04-25 20:48:07,577 INFO  : Prediction for Disease - Diabetic
-2023-04-25 20:48:07,578 INFO  : 127.0.0.1 - - [25/Apr/2023 20:48:07] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
-2023-04-25 20:48:10,194 INFO  : Request came for Disease - breast_cancer
-2023-04-25 20:48:10,515 INFO  : Prediction for Disease - Benign
-2023-04-25 20:48:10,516 INFO  : 127.0.0.1 - - [25/Apr/2023 20:48:10] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
-2023-04-25 20:48:12,908 INFO  : Request came for Disease - chronic_kidney
-2023-04-25 20:48:12,919 INFO  : Prediction for Disease - Chronic Kidney Disease
-2023-04-25 20:48:12,920 INFO  : 127.0.0.1 - - [25/Apr/2023 20:48:12] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
-2023-04-25 20:48:15,695 INFO  : Request came for Disease - heart_disease
-2023-04-25 20:48:15,705 INFO  : Prediction for Disease - Heart Disease
-2023-04-25 20:48:15,705 INFO  : 127.0.0.1 - - [25/Apr/2023 20:48:15] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
-2023-04-25 20:48:18,203 INFO  : Request came for Disease - liver_disease
-2023-04-25 20:48:18,205 INFO  : 127.0.0.1 - - [25/Apr/2023 20:48:18] "[31m[1mPOST /hitaya/api/v1/disease HTTP/1.1[0m" 400 -
-2023-04-25 20:48:49,116 INFO  : Request came for Disease - liver_disease
-2023-04-25 20:48:49,126 INFO  : Prediction for Disease - Liver Disease
-2023-04-25 20:48:49,127 INFO  : 127.0.0.1 - - [25/Apr/2023 20:48:49] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-04-28 22:01:39,785 INFO  : [33mPress CTRL+C to quit[0m
+2023-04-28 22:01:39,786 INFO  :  * Restarting with stat
+2023-04-28 22:01:41,273 WARNING  :  * Debugger is active!
+2023-04-28 22:01:41,277 INFO  :  * Debugger PIN: 701-778-870
+2023-04-28 22:01:46,063 INFO  : YOLOR  2023-4-28 torch 1.11.0+cu113 CUDA:cuda (NVIDIA GeForce RTX 3050 Laptop GPU, 4095.5MB)
+
+2023-04-28 22:01:48,055 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
+2023-04-28 22:01:49,831 INFO  : 127.0.0.1 - - [28/Apr/2023 22:01:49] "POST /hitaya/api/v1/disease/predictImage HTTP/1.1" 200 -
+2023-04-28 22:01:52,320 INFO  : 127.0.0.1 - - [28/Apr/2023 22:01:52] "GET /static/predict/prediction_image.jpg HTTP/1.1" 200 -
