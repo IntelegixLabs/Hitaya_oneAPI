@@ -1,3 +1,5 @@
 /venv/
 /.idea/
 /logs/HitayaLog.log/
+/resources/models/tumor_model.pt
+/resources/models/chest_xray.pt
