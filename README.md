@@ -14,5 +14,7 @@
 $ git clone https://github.com/IntelegixLabs/Hitaya_oneAPI.git
 $ cd Hitaya_oneAPI
 $ pip install -r requirements.txt
+$ pip install -r requirements_gpu.txt
+$ pip install -r requirements_oneapi.txt
 $ python app.py
 ```
