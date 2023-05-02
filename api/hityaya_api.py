@@ -2,6 +2,9 @@
 import os
 import os.path
 import sys
+from keras.models import load_model
+import numpy as np
+import cv2
 
 path = os.path.abspath(os.path.join(os.getcwd(), "./."))
 sys.path.append(path)
@@ -30,9 +33,10 @@ disease_Blueprint = Blueprint('disease_Blueprint', __name__)
 ######### Function for return disease assesment #######
 
 UPLOAD_FOLDER = 'static/upload'
+model_file = 'resources/models/skin_cancer.h5'
 
-@disease_Blueprint.route('/disease/predictImage', methods=['GET', 'POST'])
-def upload():
+@disease_Blueprint.route('/disease/chext_xray', methods=['GET', 'POST'])
+def chext_xray():
     if request.method == 'POST':
         # Get the file from post request
         f = request.files['file']
@@ -80,6 +84,45 @@ def upload():
 
         # Do some processing, get output_imgs
         return Response(json.dumps(report), mimetype='application/json')
+
+    return None
+
+@disease_Blueprint.route('/disease/skin_cancer', methods=['GET', 'POST'])
+def skin_cancer():
+    if request.method == 'POST':
+        # Get the file from post request
+        f = request.files['file']
+        filename = f.filename
+
+        # save our image in upload folder
+        file_path = os.path.join(UPLOAD_FOLDER, filename)
+        f.save(file_path)  # save image into upload folder
+
+        def load_image(img_path):
+
+            img = cv2.imread(img_path, cv2.IMREAD_COLOR)
+            img_resize = cv2.resize(img, (64, 64))
+            img_tensor = np.array(img_resize)
+            image = np.expand_dims(img_tensor, axis=0)
+
+            return image
+
+        # load a single image
+        new_image = load_image(file_path)
+        # load model
+        model = load_model(model_file)
+
+        # check prediction
+        pred = model.predict(new_image)
+
+        skin_cancer_types = ['Melanoma', 'Vascular lesion', 'Melanocytic nevus', 'Actinic keratosis',
+                             'Squamous cell carcinoma', 'Benign keratosis', 'Basal cell carcinoma', 'Dermatofibroma']
+
+        pred = list(pred)
+
+        pred_index = pred.index(max(pred))
+
+        return Response(json.dumps(skin_cancer_types[pred_index]))
 
     return None
 

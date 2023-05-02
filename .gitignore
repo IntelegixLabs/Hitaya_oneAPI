@@ -1,5 +1,7 @@
 /venv/
 /.idea/
 /logs/HitayaLog.log/
-/resources/models/tumor_model.pt
 /resources/models/chest_xray.pt
+/resources/models/skin_cancer.h5
+/resources/models/pneumonia.h5
+/resources/models/brain_tumor.pkl
