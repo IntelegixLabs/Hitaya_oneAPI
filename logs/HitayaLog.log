@@ -33,3 +33,85 @@
 2023-04-28 22:01:48,055 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
 2023-04-28 22:01:49,831 INFO  : 127.0.0.1 - - [28/Apr/2023 22:01:49] "POST /hitaya/api/v1/disease/predictImage HTTP/1.1" 200 -
 2023-04-28 22:01:52,320 INFO  : 127.0.0.1 - - [28/Apr/2023 22:01:52] "GET /static/predict/prediction_image.jpg HTTP/1.1" 200 -
+2023-04-30 13:28:28,908 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-04-30 13:28:28,908 INFO  : [33mPress CTRL+C to quit[0m
+2023-04-30 13:28:28,910 INFO  :  * Restarting with stat
+2023-04-30 13:28:31,055 WARNING  :  * Debugger is active!
+2023-04-30 13:28:31,063 INFO  :  * Debugger PIN: 701-778-870
+2023-04-30 13:37:17,457 INFO  : 127.0.0.1 - - [30/Apr/2023 13:37:17] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-04-30 13:37:17,718 INFO  : Request came for Disease - breast_cancer
+2023-04-30 13:37:18,350 INFO  : Prediction for Disease - Benign
+2023-04-30 13:37:18,350 INFO  : 127.0.0.1 - - [30/Apr/2023 13:37:18] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-04-30 13:49:46,633 INFO  : 127.0.0.1 - - [30/Apr/2023 13:49:46] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-04-30 13:49:46,898 INFO  : Request came for Disease - diabetic
+2023-04-30 13:49:46,914 INFO  : Prediction for Disease - Not Diabetic
+2023-04-30 13:49:46,922 INFO  : 127.0.0.1 - - [30/Apr/2023 13:49:46] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-04-30 13:50:07,144 INFO  : 127.0.0.1 - - [30/Apr/2023 13:50:07] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-04-30 13:50:07,462 INFO  : Request came for Disease - breast_cancer
+2023-04-30 13:50:07,484 INFO  : Prediction for Disease - Benign
+2023-04-30 13:50:07,484 INFO  : 127.0.0.1 - - [30/Apr/2023 13:50:07] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-04-30 13:50:25,885 INFO  : 127.0.0.1 - - [30/Apr/2023 13:50:25] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-04-30 13:50:26,192 INFO  : Request came for Disease - liver_disease
+2023-04-30 13:50:26,210 INFO  : Prediction for Disease - Liver Disease
+2023-04-30 13:50:26,210 INFO  : 127.0.0.1 - - [30/Apr/2023 13:50:26] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-02 11:13:06,447 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-02 11:13:06,447 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-02 11:13:06,450 INFO  :  * Restarting with stat
+2023-05-02 11:13:13,929 WARNING  :  * Debugger is active!
+2023-05-02 11:13:13,934 INFO  :  * Debugger PIN: 701-778-870
+2023-05-02 11:13:20,897 INFO  : 127.0.0.1 - - [02/May/2023 11:13:20] "[35m[1mPOST /hitaya/api/v1/disease/chext_xray HTTP/1.1[0m" 500 -
+2023-05-02 11:13:47,841 INFO  : YOLOR  2023-4-28 torch 1.11.0+cu113 CUDA:cuda (NVIDIA GeForce RTX 3050 Laptop GPU, 4095.5MB)
+
+2023-05-02 11:14:04,197 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
+2023-05-02 11:14:11,341 INFO  : 127.0.0.1 - - [02/May/2023 11:14:11] "POST /hitaya/api/v1/disease/chext_xray HTTP/1.1" 200 -
+2023-05-02 11:14:20,838 INFO  : 127.0.0.1 - - [02/May/2023 11:14:20] "GET /static/predict/prediction_image.jpg HTTP/1.1" 200 -
+2023-05-02 11:14:51,564 INFO  : 127.0.0.1 - - [02/May/2023 11:14:51] "[35m[1mPOST /hitaya/api/v1/disease/skin_cancer HTTP/1.1[0m" 500 -
+2023-05-02 11:15:28,330 INFO  :  * Detected change in 'C:\\Users\\raj71\\Desktop\\Intelegix Labs\\Hitaya_oneAPI\\api\\hityaya_api.py', reloading
+2023-05-02 11:15:37,100 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-02 11:15:37,101 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-02 11:15:37,103 INFO  :  * Restarting with stat
+2023-05-02 11:15:42,069 WARNING  :  * Debugger is active!
+2023-05-02 11:15:42,075 INFO  :  * Debugger PIN: 701-778-870
+2023-05-02 11:15:55,529 INFO  : 127.0.0.1 - - [02/May/2023 11:15:55] "[35m[1mPOST /hitaya/api/v1/disease/skin_cancer HTTP/1.1[0m" 500 -
+2023-05-02 11:17:02,476 INFO  :  * Detected change in 'C:\\Users\\raj71\\Desktop\\Intelegix Labs\\Hitaya_oneAPI\\api\\hityaya_api.py', reloading
+2023-05-02 11:17:03,384 INFO  :  * Restarting with stat
+2023-05-02 11:17:10,719 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-02 11:17:10,720 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-02 11:17:10,722 INFO  :  * Restarting with stat
+2023-05-02 11:17:16,869 WARNING  :  * Debugger is active!
+2023-05-02 11:17:16,877 INFO  :  * Debugger PIN: 701-778-870
+2023-05-02 11:17:22,350 INFO  : 127.0.0.1 - - [02/May/2023 11:17:22] "[35m[1mPOST /hitaya/api/v1/disease/skin_cancer HTTP/1.1[0m" 500 -
+2023-05-02 11:20:52,830 INFO  :  * Detected change in 'C:\\Users\\raj71\\Desktop\\Intelegix Labs\\Hitaya_oneAPI\\api\\hityaya_api.py', reloading
+2023-05-02 11:20:53,676 INFO  :  * Restarting with stat
+2023-05-02 11:20:59,013 WARNING  :  * Debugger is active!
+2023-05-02 11:20:59,018 INFO  :  * Debugger PIN: 701-778-870
+2023-05-02 11:21:14,011 INFO  :  * Detected change in 'C:\\Users\\raj71\\Desktop\\Intelegix Labs\\Hitaya_oneAPI\\api\\hityaya_api.py', reloading
+2023-05-02 11:21:14,784 INFO  :  * Restarting with stat
+2023-05-02 11:21:22,613 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-02 11:21:22,613 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-02 11:21:22,615 INFO  :  * Restarting with stat
+2023-05-02 11:21:28,829 WARNING  :  * Debugger is active!
+2023-05-02 11:21:28,837 INFO  :  * Debugger PIN: 701-778-870
+2023-05-02 11:21:33,409 INFO  : 127.0.0.1 - - [02/May/2023 11:21:33] "[35m[1mPOST /hitaya/api/v1/disease/skin_cancer HTTP/1.1[0m" 500 -
+2023-05-02 11:22:26,828 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-02 11:22:26,829 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-02 11:22:26,832 INFO  :  * Restarting with stat
+2023-05-02 11:22:32,124 WARNING  :  * Debugger is active!
+2023-05-02 11:22:32,124 INFO  :  * Debugger PIN: 701-778-870
+2023-05-02 11:22:57,703 INFO  : 127.0.0.1 - - [02/May/2023 11:22:57] "[35m[1mPOST /hitaya/api/v1/disease/skin_cancer HTTP/1.1[0m" 500 -
+2023-05-02 11:23:48,666 INFO  :  * Detected change in 'C:\\Users\\raj71\\Desktop\\Intelegix Labs\\Hitaya_oneAPI\\api\\hityaya_api.py', reloading
+2023-05-02 11:23:59,327 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-02 11:23:59,327 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-02 11:23:59,329 INFO  :  * Restarting with stat
+2023-05-02 11:24:04,643 WARNING  :  * Debugger is active!
+2023-05-02 11:24:04,647 INFO  :  * Debugger PIN: 701-778-870
+2023-05-02 11:24:54,514 INFO  : 127.0.0.1 - - [02/May/2023 11:24:54] "POST /hitaya/api/v1/disease/skin_cancer HTTP/1.1" 200 -
+2023-05-02 11:25:45,899 INFO  : 127.0.0.1 - - [02/May/2023 11:25:45] "POST /hitaya/api/v1/disease/skin_cancer HTTP/1.1" 200 -
+2023-05-02 11:26:24,385 INFO  : 127.0.0.1 - - [02/May/2023 11:26:24] "POST /hitaya/api/v1/disease/skin_cancer HTTP/1.1" 200 -
