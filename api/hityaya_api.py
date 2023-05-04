@@ -36,7 +36,7 @@ UPLOAD_FOLDER = 'static/upload'
 model_file = 'resources/models/skin_cancer.h5'
 
 @disease_Blueprint.route('/disease/chest_xray', methods=['GET', 'POST'])
-def chest_xray():
+def chest_xrays():
     if request.method == 'POST':
         # Get the file from post request
         f = request.files['file']
