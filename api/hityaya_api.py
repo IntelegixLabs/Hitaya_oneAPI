@@ -35,8 +35,8 @@ disease_Blueprint = Blueprint('disease_Blueprint', __name__)
 UPLOAD_FOLDER = 'static/upload'
 model_file = 'resources/models/skin_cancer.h5'
 
-@disease_Blueprint.route('/disease/chext_xray', methods=['GET', 'POST'])
-def chext_xray():
+@disease_Blueprint.route('/disease/chest_xray', methods=['GET', 'POST'])
+def chest_xray():
     if request.method == 'POST':
         # Get the file from post request
         f = request.files['file']
@@ -122,7 +122,7 @@ def skin_cancer():
 
         pred_index = pred.index(max(pred))
 
-        return Response(json.dumps(skin_cancer_types[pred_index]))
+        return Response(json.dumps(skin_cancer_types[pred_index]), mimetype='application/json')
 
     return None
 
