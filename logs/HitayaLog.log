@@ -115,3 +115,123 @@
 2023-05-02 11:24:54,514 INFO  : 127.0.0.1 - - [02/May/2023 11:24:54] "POST /hitaya/api/v1/disease/skin_cancer HTTP/1.1" 200 -
 2023-05-02 11:25:45,899 INFO  : 127.0.0.1 - - [02/May/2023 11:25:45] "POST /hitaya/api/v1/disease/skin_cancer HTTP/1.1" 200 -
 2023-05-02 11:26:24,385 INFO  : 127.0.0.1 - - [02/May/2023 11:26:24] "POST /hitaya/api/v1/disease/skin_cancer HTTP/1.1" 200 -
+2023-05-05 00:26:19,026 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-05 00:26:19,026 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-05 00:26:19,034 INFO  :  * Restarting with stat
+2023-05-05 00:26:25,642 WARNING  :  * Debugger is active!
+2023-05-05 00:26:25,642 INFO  :  * Debugger PIN: 142-623-687
+2023-05-05 00:29:41,663 INFO  : 127.0.0.1 - - [05/May/2023 00:29:41] "[33mPOST /hitaya/api/v1/disease/predictImage HTTP/1.1[0m" 404 -
+2023-05-05 00:29:43,144 INFO  : 127.0.0.1 - - [05/May/2023 00:29:43] "[33mPOST /hitaya/api/v1/disease/predictImage HTTP/1.1[0m" 404 -
+2023-05-05 00:29:46,114 INFO  : 127.0.0.1 - - [05/May/2023 00:29:46] "[33mPOST /hitaya/api/v1/disease/predictImage HTTP/1.1[0m" 404 -
+2023-05-05 00:29:54,899 INFO  : 127.0.0.1 - - [05/May/2023 00:29:54] "[33mPOST /hitaya/api/v1/disease/predictImage HTTP/1.1[0m" 404 -
+2023-05-05 00:32:42,930 INFO  : YOLOR  2023-4-28 torch 1.11.0+cu113 CUDA:cuda (NVIDIA GeForce RTX 3050 Laptop GPU, 4095.5MB)
+
+2023-05-05 00:32:51,729 INFO  : YOLOR  2023-4-28 torch 1.11.0+cu113 CUDA:cuda (NVIDIA GeForce RTX 3050 Laptop GPU, 4095.5MB)
+
+2023-05-05 00:32:56,880 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
+2023-05-05 00:32:59,597 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
+2023-05-05 00:33:06,541 INFO  : YOLOR  2023-4-28 torch 1.11.0+cu113 CUDA:cuda (NVIDIA GeForce RTX 3050 Laptop GPU, 4095.5MB)
+
+2023-05-05 00:33:07,480 INFO  : 127.0.0.1 - - [05/May/2023 00:33:07] "POST /hitaya/api/v1/disease/chext_xray HTTP/1.1" 200 -
+2023-05-05 00:33:07,481 INFO  : 127.0.0.1 - - [05/May/2023 00:33:07] "POST /hitaya/api/v1/disease/chext_xray HTTP/1.1" 200 -
+2023-05-05 00:33:08,013 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
+2023-05-05 00:33:08,127 INFO  : 127.0.0.1 - - [05/May/2023 00:33:08] "POST /hitaya/api/v1/disease/chext_xray HTTP/1.1" 200 -
+2023-05-05 00:33:08,594 INFO  : 127.0.0.1 - - [05/May/2023 00:33:08] "GET /static/predict/roi_1.jpg HTTP/1.1" 200 -
+2023-05-05 00:33:08,596 INFO  : 127.0.0.1 - - [05/May/2023 00:33:08] "GET /static/predict/roi_0.jpg HTTP/1.1" 200 -
+2023-05-05 00:33:08,598 INFO  : 127.0.0.1 - - [05/May/2023 00:33:08] "GET /static/predict/prediction_image.jpg HTTP/1.1" 200 -
+2023-05-05 00:39:03,205 INFO  : YOLOR  2023-4-28 torch 1.11.0+cu113 CUDA:cuda (NVIDIA GeForce RTX 3050 Laptop GPU, 4095.5MB)
+
+2023-05-05 00:39:05,571 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
+2023-05-05 00:39:06,005 INFO  : 127.0.0.1 - - [05/May/2023 00:39:06] "POST /hitaya/api/v1/disease/chext_xray HTTP/1.1" 200 -
+2023-05-05 00:46:16,765 INFO  : 127.0.0.1 - - [05/May/2023 00:46:16] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 00:46:17,015 INFO  : Request came for Disease - diabetic
+2023-05-05 00:46:32,612 INFO  : 127.0.0.1 - - [05/May/2023 00:46:32] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 00:46:35,145 INFO  : Request came for Disease - diabetic
+2023-05-05 00:46:50,341 INFO  : 127.0.0.1 - - [05/May/2023 00:46:50] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 00:46:51,157 INFO  : Request came for Disease - diabetic
+2023-05-05 00:47:12,053 INFO  : Prediction for Disease - Not Diabetic
+2023-05-05 00:47:12,059 INFO  : 127.0.0.1 - - [05/May/2023 00:47:12] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 00:47:12,085 INFO  : Prediction for Disease - Not Diabetic
+2023-05-05 00:47:12,101 INFO  : Prediction for Disease - Not Diabetic
+2023-05-05 00:47:12,108 INFO  : 127.0.0.1 - - [05/May/2023 00:47:12] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 00:47:12,110 INFO  : 127.0.0.1 - - [05/May/2023 00:47:12] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 00:47:18,792 INFO  : 127.0.0.1 - - [05/May/2023 00:47:18] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 00:47:19,107 INFO  : Request came for Disease - diabetic
+2023-05-05 00:47:19,145 INFO  : Prediction for Disease - Not Diabetic
+2023-05-05 00:47:19,155 INFO  : 127.0.0.1 - - [05/May/2023 00:47:19] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 00:47:32,553 INFO  : 127.0.0.1 - - [05/May/2023 00:47:32] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 00:47:32,873 INFO  : Request came for Disease - heart_disease
+2023-05-05 00:47:32,928 INFO  : Prediction for Disease - Heart Disease
+2023-05-05 00:47:32,928 INFO  : 127.0.0.1 - - [05/May/2023 00:47:32] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 00:47:49,729 INFO  : 127.0.0.1 - - [05/May/2023 00:47:49] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 00:47:50,055 INFO  : Request came for Disease - breast_cancer
+2023-05-05 00:47:53,083 INFO  : Prediction for Disease - Benign
+2023-05-05 00:47:53,083 INFO  : 127.0.0.1 - - [05/May/2023 00:47:53] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 02:41:31,387 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-05 02:41:31,387 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-05 02:41:31,389 INFO  :  * Restarting with stat
+2023-05-05 02:41:36,767 WARNING  :  * Debugger is active!
+2023-05-05 02:41:36,773 INFO  :  * Debugger PIN: 142-623-687
+2023-05-05 02:42:01,501 INFO  : 127.0.0.1 - - [05/May/2023 02:42:01] "[35m[1mPOST /hitaya/api/v1/disease/chest_xray HTTP/1.1[0m" 500 -
+2023-05-05 02:42:48,331 INFO  : 127.0.0.1 - - [05/May/2023 02:42:48] "[35m[1mPOST /hitaya/api/v1/disease/chest_xray HTTP/1.1[0m" 500 -
+2023-05-05 02:43:31,071 INFO  : 127.0.0.1 - - [05/May/2023 02:43:31] "[35m[1mPOST /hitaya/api/v1/disease/chest_xray HTTP/1.1[0m" 500 -
+2023-05-05 02:43:49,076 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-05 02:43:49,076 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-05 02:43:49,078 INFO  :  * Restarting with stat
+2023-05-05 02:43:54,025 WARNING  :  * Debugger is active!
+2023-05-05 02:43:54,029 INFO  :  * Debugger PIN: 142-623-687
+2023-05-05 02:43:59,769 INFO  : 127.0.0.1 - - [05/May/2023 02:43:59] "[35m[1mPOST /hitaya/api/v1/disease/chest_xray HTTP/1.1[0m" 500 -
+2023-05-05 02:44:02,862 INFO  : 127.0.0.1 - - [05/May/2023 02:44:02] "[35m[1mPOST /hitaya/api/v1/disease/chest_xray HTTP/1.1[0m" 500 -
+2023-05-05 02:44:09,740 INFO  :  * Detected change in 'C:\\Users\\raj71\\Desktop\\Intelegix Labs\\Hitaya_oneAPI\\api\\hityaya_api.py', reloading
+2023-05-05 02:44:10,458 INFO  :  * Restarting with stat
+2023-05-05 02:44:15,348 WARNING  :  * Debugger is active!
+2023-05-05 02:44:15,354 INFO  :  * Debugger PIN: 142-623-687
+2023-05-05 02:44:28,008 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-05 02:44:28,008 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-05 02:44:28,010 INFO  :  * Restarting with stat
+2023-05-05 02:44:33,117 WARNING  :  * Debugger is active!
+2023-05-05 02:44:33,121 INFO  :  * Debugger PIN: 142-623-687
+2023-05-05 02:44:33,661 INFO  : YOLOR  2023-4-28 torch 1.11.0+cu113 CUDA:cuda (NVIDIA GeForce RTX 3050 Laptop GPU, 4095.5MB)
+
+2023-05-05 02:44:38,837 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
+2023-05-05 02:44:43,190 INFO  : 127.0.0.1 - - [05/May/2023 02:44:43] "POST /hitaya/api/v1/disease/chest_xray HTTP/1.1" 200 -
+2023-05-05 02:45:05,246 INFO  :  * Detected change in 'C:\\Users\\raj71\\Desktop\\Intelegix Labs\\Hitaya_oneAPI\\api\\hityaya_api.py', reloading
+2023-05-05 02:45:07,233 INFO  :  * Restarting with stat
+2023-05-05 02:45:12,844 WARNING  :  * Debugger is active!
+2023-05-05 02:45:12,848 INFO  :  * Debugger PIN: 142-623-687
+2023-05-05 02:45:22,336 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-05 02:45:22,336 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-05 02:45:22,338 INFO  :  * Restarting with stat
+2023-05-05 02:45:27,866 WARNING  :  * Debugger is active!
+2023-05-05 02:45:27,871 INFO  :  * Debugger PIN: 142-623-687
+2023-05-05 02:45:28,398 INFO  : YOLOR  2023-4-28 torch 1.11.0+cu113 CUDA:cuda (NVIDIA GeForce RTX 3050 Laptop GPU, 4095.5MB)
+
+2023-05-05 02:45:31,440 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
+2023-05-05 02:45:33,849 INFO  : 127.0.0.1 - - [05/May/2023 02:45:33] "POST /hitaya/api/v1/disease/chest_xray HTTP/1.1" 200 -
+2023-05-05 15:58:18,462 INFO  : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-05-05 15:58:18,463 INFO  : [33mPress CTRL+C to quit[0m
+2023-05-05 15:58:18,465 INFO  :  * Restarting with stat
+2023-05-05 15:58:23,873 WARNING  :  * Debugger is active!
+2023-05-05 15:58:23,883 INFO  :  * Debugger PIN: 142-623-687
+2023-05-05 15:59:22,177 INFO  : 127.0.0.1 - - [05/May/2023 15:59:22] "POST /hitaya/api/v1/disease/skin_cancer HTTP/1.1" 200 -
+2023-05-05 15:59:57,125 INFO  : YOLOR  2023-4-28 torch 1.11.0+cu113 CUDA:cuda (NVIDIA GeForce RTX 3050 Laptop GPU, 4095.5MB)
+
+2023-05-05 16:00:02,640 INFO  : Model Summary: 314 layers, 36551894 parameters, 6194944 gradients
+2023-05-05 16:00:06,946 INFO  : 127.0.0.1 - - [05/May/2023 16:00:06] "POST /hitaya/api/v1/disease/chest_xray HTTP/1.1" 200 -
+2023-05-05 16:00:07,405 INFO  : 127.0.0.1 - - [05/May/2023 16:00:07] "GET /static/predict/roi_0.jpg HTTP/1.1" 200 -
+2023-05-05 16:00:07,405 INFO  : 127.0.0.1 - - [05/May/2023 16:00:07] "GET /static/predict/roi_1.jpg HTTP/1.1" 200 -
+2023-05-05 16:00:07,405 INFO  : 127.0.0.1 - - [05/May/2023 16:00:07] "GET /static/predict/prediction_image.jpg HTTP/1.1" 200 -
+2023-05-05 16:00:33,998 INFO  : 127.0.0.1 - - [05/May/2023 16:00:33] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 16:00:34,248 INFO  : Request came for Disease - breast_cancer
+2023-05-05 16:00:34,745 INFO  : Prediction for Disease - Benign
+2023-05-05 16:00:34,745 INFO  : 127.0.0.1 - - [05/May/2023 16:00:34] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 16:00:55,967 INFO  : 127.0.0.1 - - [05/May/2023 16:00:55] "OPTIONS /hitaya/api/v1/disease HTTP/1.1" 200 -
+2023-05-05 16:00:56,282 INFO  : Request came for Disease - chronic_kidney
+2023-05-05 16:00:56,296 INFO  : Prediction for Disease - Chronic Kidney Disease
+2023-05-05 16:00:56,304 INFO  : 127.0.0.1 - - [05/May/2023 16:00:56] "POST /hitaya/api/v1/disease HTTP/1.1" 200 -
