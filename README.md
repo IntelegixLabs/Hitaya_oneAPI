@@ -33,16 +33,16 @@ $ python app.py
 
 <br />
 <p align="center">
-  <img src="data/screenshots/1.png" width="400"/>
-  <img src="data/screenshots/2.png" width="400"/>
-  <img src="data/screenshots/3.png" width="400"/>
-  <img src="data/screenshots/4.png" width="400"/>
-  <img src="data/screenshots/5.png" width="400"/>
-  <img src="data/screenshots/6.png" width="400"/>
-  <img src="data/screenshots/7.png" width="400"/>
-  <img src="data/screenshots/8.png" width="400"/>
-  <img src="data/screenshots/9.png" width="400"/>
-  <img src="data/screenshots/10.png" width="400"/>
+  <img src="data/1.png" width="400"/>
+  <img src="data/2.png" width="400"/>
+  <img src="data/3.png" width="400"/>
+  <img src="data/4.png" width="400"/>
+  <img src="data/5.png" width="400"/>
+  <img src="data/6.png" width="400"/>
+  <img src="data/7.png" width="400"/>
+  <img src="data/8.png" width="400"/>
+  <img src="data/9.png" width="400"/>
+  <img src="data/10.png" width="400"/>
 </p>
 <br />
 
