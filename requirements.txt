@@ -1,3 +1,4 @@
+boto3==1.26.142
 Flask==2.2.3
 Flask-Cors==3.0.10
 pydantic==1.10.7
@@ -16,8 +17,8 @@ seaborn==0.12.2
 lightgbm==3.3.5
 scikit-learn==1.2.2
 tqdm==4.65.0
-# keras==2.12.0
-# tensorflow==2.12.0
-# Keras-Preprocessing==1.1.2
-# scikit-image==0.20.0
+keras==2.12.0
+tensorflow==2.12.0
+Keras-Preprocessing==1.1.2
+scikit-image==0.20.0
 # fastai==2.7.12
