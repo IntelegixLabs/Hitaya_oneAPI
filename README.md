@@ -46,3 +46,11 @@ $ python app.py
 </p>
 <br />
 
+### 4. Medium Posts
+1. [HitayaOne Overview](https://medium.com/@manijb13/hitaya-oneapi-healthcare-for-underserved-communities-5b4a563f08f7)
+2. [Diabetes Prediction](https://medium.com/@manijb13/hitaya-oneapi-machine-learning-model-training-using-intel-oneapi-53b06e92b21c)
+3. [Breast Cancer](https://medium.com/@raj713335/hitaya-oneapi-breast-cancer-machine-learning-model-training-using-intel-oneapi-797bf1521301)
+4. [Heart Disease](https://medium.com/@raj713335/hitaya-oneapi-heart-disease-machine-learning-model-training-using-intel-oneapi-extension-for-c00b163042df)
+5. [Liver Disease](https://medium.com/@raj713335/hitaya-oneapi-liver-disease-machine-learning-model-prediction-using-intel-oneapi-78129d193bb9)
+6. [Chronic Kidney Disease](https://medium.com/@raj713335/hitaya-oneapi-chronic-kidney-disease-machine-learning-model-training-using-intel-oneapi-dbf6f85f1544)
+7. [Skin Cancer Prediction](https://itsjb13.medium.com/hitaya-oneapi-skin-cancer-detection-using-intel-optimization-for-tensorflow-eb95d54564af)
