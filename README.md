@@ -7,7 +7,7 @@ It provides a way for farmers to sell carbon credits in the form of NFT to indus
 ## Features
 - Creating an AI/ML preliminary diagnosis application.
 - Users/Doctors can input images of x-ray scans/ medical data/ or just images and our Application will give them the diagnosis results.
-- All user data will be stored using blockchain, then ensuring the security of the data.
+- All user data will be stored using blockchain, then ensuring the security of the data .
 
 
 
