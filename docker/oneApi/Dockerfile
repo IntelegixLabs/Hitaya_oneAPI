@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir thop==0.1.1.post2209072238
 
 COPY ./requirements_oneapi.txt /requirements_oneapi.txt
 RUN pip install --no-cache-dir -r requirements_oneapi.txt
-RUN pip install --no-cache-dir boto3
+RUN pip install --no-cache-dir kubernetes==26.1.0
 
 
 FROM python:3.10.6-slim-bullseye as build
