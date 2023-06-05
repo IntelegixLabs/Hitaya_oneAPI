@@ -2,8 +2,6 @@
   
 <strong>Hitaya oneAPI </strong>Medical diagnosis using machine learning - Machine Learning has been revolutionizing on healthcare domain. ML models can now detect patterns underlying diseases. In this way, AI techniques can be considered as the second pair of eyes that can decode patient health knowledge extracted from large data sets by summing up facts & observations of diseases. Due to the Covid-19 pandemic existing digital diagnosis methods are being preferred as people are willing to follow Covid norms & stay safe.
 
-It provides a way for farmers to sell carbon credits in the form of NFT to industrial buyers who needs to buy carbon credits in order to achieve sustainability goals, thus giving farmers money to invest in more sustainable farming practices, and a win-win situation for all, the Air Quality verification is done using IoT devices, thus acting as a verification mechanism to ensure, that money is invested by farmers to adopt more sustainable farming methods.
-  
 ## Features
 - Creating an AI/ML preliminary diagnosis application.
 - Users/Doctors can input images of x-ray scans/ medical data/ or just images and our Application will give them the diagnosis results.
