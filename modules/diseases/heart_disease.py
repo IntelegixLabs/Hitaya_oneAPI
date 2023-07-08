@@ -1,16 +1,16 @@
 ##########To add PYTHON PATH to make sure All Module Loads ########## 
 import os
 import sys
-path = os.path.abspath(os.path.join(os.getcwd(),"../"))
+
+from app import db
+from modules.dbconnect.models.heart import HeartModel
+
+path = os.path.abspath(os.path.join(os.getcwd(), "../"))
 sys.path.append(path)
 
-
 ####### Importing Library for Works ###########
-import logging
 
 ############ Import Constants Module ##############
-import APP_Constants as AC
-
 ############ Import Supporting Module ##############
 from modules.helper.support import get_classifier
 
@@ -38,4 +38,9 @@ def get_response(diseaseparameter):
         return_msg = "Heart Disease"
     else:
         return_msg = "No Heart Disease"
+
+    diseaseparameter["result"] = return_msg
+
+    heart_data = HeartModel(**diseaseparameter)
+    db.heart.insert_one(heart_data.dict())
     return return_msg

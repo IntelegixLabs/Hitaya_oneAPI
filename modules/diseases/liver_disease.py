@@ -1,16 +1,16 @@
 ##########To add PYTHON PATH to make sure All Module Loads ########## 
 import os
 import sys
+
+from app import db
+from modules.dbconnect.models.liver import LiverModel
+
 path = os.path.abspath(os.path.join(os.getcwd(), "../"))
 sys.path.append(path)
 
-
 ####### Importing Library for Works ###########
-import logging
 
 ############ Import Constants Module ##############
-import APP_Constants as AC
-
 ############ Import Supporting Module ##############
 from modules.helper.support import get_classifier
 
@@ -31,11 +31,16 @@ def get_response(diseaseparameter):
 
     prediction = classifier_liver_disease.predict(
         [[age, gender_female, gender_male, total_bilirubin, direct_bilirubin, alkaline_phosphotase,
-            alamine_aminotransferase, aspartate_aminotransferase, total_protiens, albumin,
-            albumin_and_globulin_ratio]])
+          alamine_aminotransferase, aspartate_aminotransferase, total_protiens, albumin,
+          albumin_and_globulin_ratio]])
 
     if prediction[0] == 1:
-        return_msg="Liver Disease"
+        return_msg = "Liver Disease"
     else:
-        return_msg="No Liver Disease"
+        return_msg = "No Liver Disease"
+
+    diseaseparameter["result"] = return_msg
+
+    liver_data = LiverModel(**diseaseparameter)
+    db.liver.insert_one(liver_data.dict())
     return return_msg

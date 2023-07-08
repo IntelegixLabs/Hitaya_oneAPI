@@ -1,20 +1,21 @@
 ##########To add PYTHON PATH to make sure All Module Loads ########## 
 import os
 import sys
+
+from app import db
+from modules.dbconnect.models.breast_cancer import BreastCancerModel
+
 path = os.path.abspath(os.path.join(os.getcwd(), "../"))
 sys.path.append(path)
 
 ####### Importing Library for Works ###########
-import logging
 
 ############ Import Constants Module ##############
-import APP_Constants as AC
-
 from modules.helper.support import get_classifier
 
 
 def get_response(diseaseparameter):
-    classifier_breast_cancer= get_classifier(disease="breast_cancer")
+    classifier_breast_cancer = get_classifier(disease="breast_cancer")
     radius_mean = diseaseparameter["radius_mean"]
     texture_mean = diseaseparameter["texture_mean"]
     perimeter_mean = diseaseparameter["perimeter_mean"]
@@ -60,5 +61,9 @@ def get_response(diseaseparameter):
     if prediction[0] == "M":
         return_msg = "Malignant"
     else:
-        return_msg ="Benign"
+        return_msg = "Benign"
+    diseaseparameter["result"] = return_msg
+    breast_cancer_data = BreastCancerModel(**diseaseparameter)
+
+    db.breast_cancer.insert_one(breast_cancer_data.dict())
     return return_msg
