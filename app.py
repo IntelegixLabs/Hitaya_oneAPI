@@ -1,5 +1,6 @@
 ######## Importing Lib for Python works and Flasks #################
 import logging
+import os
 from logging.handlers import RotatingFileHandler
 
 from flask import Flask
@@ -14,7 +15,7 @@ from api.hityaya_api import disease_Blueprint
 app = Flask(__name__)
 
 # Initialize mongo db connection
-app.config["MONGO_URI"] = "mongodb+srv://subhransud525:RvxFjTbMsJ7aegHq@oneapi.r1znbt2.mongodb.net/one_api"
+app.config["MONGO_URI"] = os.environ["MONGO_URI"]
 db = PyMongo(app).db
 
 CORS(app)

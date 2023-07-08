@@ -12,4 +12,5 @@ services:
     ports:
       - "5000:5000"
     container_name: one_api
-
+    env_file:
+      - .env
