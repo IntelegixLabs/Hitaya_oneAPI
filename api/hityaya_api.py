@@ -6,7 +6,9 @@ from keras.models import load_model
 import numpy as np
 import cv2
 
-path = os.path.abspath(os.path.join(os.getcwd(), "./."))
+from modules.dbconnect.models.diabetics import DiabeticModel
+
+path = os.path.abspath(os.path.join(os.getcwd(), ""))
 sys.path.append(path)
 
 ####### Importing  Flask Component and required python lib ##################
@@ -34,6 +36,7 @@ disease_Blueprint = Blueprint('disease_Blueprint', __name__)
 
 UPLOAD_FOLDER = 'static/upload'
 model_file = 'resources/models/skin_cancer.h5'
+
 
 @disease_Blueprint.route('/disease/chest_xray', methods=['GET', 'POST'])
 def chest_xrays():
@@ -73,7 +76,7 @@ def chest_xrays():
             cv2.imwrite(f'./static/predict/{image}', imagex)
 
             # save report
-            report.append(["http://"+host+"/static/predict/"+image,
+            report.append(["http://" + host + "/static/predict/" + image,
                            x,
                            y,
                            w,
@@ -87,6 +90,7 @@ def chest_xrays():
 
     return None
 
+
 @disease_Blueprint.route('/disease/skin_cancer', methods=['GET', 'POST'])
 def skin_cancer():
     if request.method == 'POST':
@@ -99,7 +103,6 @@ def skin_cancer():
         f.save(file_path)  # save image into upload folder
 
         def load_image(img_path):
-
             img = cv2.imread(img_path, cv2.IMREAD_COLOR)
             img_resize = cv2.resize(img, (64, 64))
             img_tensor = np.array(img_resize)
@@ -126,13 +129,28 @@ def skin_cancer():
 
     return None
 
-@disease_Blueprint.route('/disease', methods=['POST'])
+
+@disease_Blueprint.route('/disease', methods=['POST',"GET"])
 def disease():
     """disease API 
 
     Returns:
         [JSON]: [disease Model result JSON]
     """
+    from app import db
+    if request.method == "GET":
+        data :list = []
+        filters = request.headers.get("x-filter")
+        if filters:
+            qs = db.diabetics.find(json.loads(filters))
+        else:
+            qs = db.diabetics.find()
+        for document in qs:
+            diabetic_obj = DiabeticModel(**document)
+            data.append(json.loads(diabetic_obj.json()))
+        return jsonify(data)
+
+
     try:
         inputpayload = request.get_json(cache=False)
         logging.info("Request came for Disease - %s", inputpayload['disease'])

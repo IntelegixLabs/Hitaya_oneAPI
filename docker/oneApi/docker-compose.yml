@@ -7,6 +7,8 @@ services:
       dockerfile: "docker/oneApi/Dockerfile"
     volumes:
       - ../../../Hitaya_oneAPI:/ml_app
+    stdin_open: true
+    tty: true
     ports:
       - "5000:5000"
     container_name: one_api
