@@ -6,6 +6,7 @@ from keras.models import load_model
 import numpy as np
 import cv2
 
+from api.utility import response, document_filter
 from modules.dbconnect.models.diabetics import DiabeticModel
 
 path = os.path.abspath(os.path.join(os.getcwd(), ""))
@@ -131,6 +132,7 @@ def skin_cancer():
 
 
 @disease_Blueprint.route('/disease', methods=['POST',"GET"])
+@response(DiabeticModel)
 def disease():
     """disease API 
 
@@ -139,16 +141,7 @@ def disease():
     """
     from app import db
     if request.method == "GET":
-        data :list = []
-        filters = request.headers.get("x-filter")
-        if filters:
-            qs = db.diabetics.find(json.loads(filters))
-        else:
-            qs = db.diabetics.find()
-        for document in qs:
-            diabetic_obj = DiabeticModel(**document)
-            data.append(json.loads(diabetic_obj.json()))
-        return jsonify(data)
+        return document_filter(db.diabetics)
 
 
     try:
@@ -156,6 +149,6 @@ def disease():
         logging.info("Request came for Disease - %s", inputpayload['disease'])
         result = get_disease_response(disease=inputpayload['disease'], diseaseparameter=inputpayload['parameters'])
         logging.info("Prediction for Disease - %s", result)
-        return jsonify(result), status.HTTP_200_OK
+        return jsonify(result), status.HTTP_201_CREATED
     except Exception as err:
         return jsonify(f"Module - Error - {err}"), status.HTTP_400_BAD_REQUEST
