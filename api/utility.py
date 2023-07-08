@@ -26,7 +26,7 @@ def response(model, code=200):
 
             # If object_ is a :class:'Response' then return it
             if isinstance(object_, Response):
-                return object_ , code
+                return object_, code
             data: list = []
             for document in object_:
                 obj_ = model(**document)

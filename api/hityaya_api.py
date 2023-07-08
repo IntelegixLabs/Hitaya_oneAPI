@@ -2,9 +2,9 @@
 import os
 import os.path
 import sys
-from keras.models import load_model
+
 import numpy as np
-import cv2
+from keras.models import load_model
 
 from api.utility import response, document_filter
 from modules.dbconnect.models.diabetics import DiabeticModel
@@ -23,15 +23,12 @@ import json
 
 ######## Importing Supporting Lib #################
 
-import APP_Constants as AC
-
 ####### Importing responses from Disease Modules #########
 from modules.helper.support import get_disease_response
 
 ######## Creating Blueprint for all APIs #########
 
 disease_Blueprint = Blueprint('disease_Blueprint', __name__)
-
 
 ######### Function for return disease assesment #######
 
@@ -131,7 +128,7 @@ def skin_cancer():
     return None
 
 
-@disease_Blueprint.route('/disease', methods=['POST',"GET"])
+@disease_Blueprint.route('/disease', methods=['POST', "GET"])
 @response(DiabeticModel)
 def disease():
     """disease API 
@@ -142,7 +139,6 @@ def disease():
     from app import db
     if request.method == "GET":
         return document_filter(db.diabetics)
-
 
     try:
         inputpayload = request.get_json(cache=False)

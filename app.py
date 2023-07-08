@@ -1,13 +1,13 @@
 ######## Importing Lib for Python works and Flasks #################
-from flask import Flask
-from flask_pymongo import PyMongo
-from flask_cors import CORS
 import logging
 from logging.handlers import RotatingFileHandler
 
+from flask import Flask
+from flask_cors import CORS
+from flask_pymongo import PyMongo
+
 ######## Importing Supporting Lib #################
 import APP_Constants as AC
-
 ###### importing the API blueprints #######
 from api.hityaya_api import disease_Blueprint
 

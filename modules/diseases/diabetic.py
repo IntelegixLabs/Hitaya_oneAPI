@@ -6,10 +6,8 @@ path = os.path.abspath(os.path.join(os.getcwd(), "../"))
 sys.path.append(path)
 
 ####### Importing Library for Works ###########
-import logging
 
 ############ Import Constants Module ##############
-import APP_Constants as AC
 
 ############ Import Supporting Module ##############
 from modules.helper.support import get_classifier

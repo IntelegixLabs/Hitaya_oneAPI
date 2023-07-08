@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import Optional
 
 from bson import ObjectId
 from pydantic import BaseModel, Field
@@ -37,7 +37,6 @@ class DiabeticModel(BaseModel):
     DiabetesPedigreeFunction: float
     Age: float
     result: str
-
 
 
 ENCODERS_BY_TYPE[PydanticObjectId] = str
