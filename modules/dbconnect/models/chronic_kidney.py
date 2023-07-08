@@ -26,17 +26,33 @@ class PydanticObjectId(ObjectId):
         )
 
 
-class DiabeticModel(BaseModel):
+class ChronicKidneyModel(BaseModel):
     id: Optional[PydanticObjectId] = Field(None, alias="_id")
-    Pregnancies: int
-    Glucose: int
-    BloodPressure: int
-    SkinThickness: int
-    Insulin: int
-    BMI: float
-    DiabetesPedigreeFunction: float
-    Age: float
-    result: Optional[str]
+    aga: int
+    bp: int | float
+    sg: int | float
+    al: int | float
+    su: int | float
+    rbc: int | float
+    pc: int | float
+    pcc: int | float
+    ba: int | float
+    bgr: int | float
+    bu: int | float
+    sc: int | float
+    sod: int | float
+    pot: int | float
+    hemo: int | float
+    pcv: int | float
+    wc: int | float
+    rc: int | float
+    htn: int | float
+    dm: int | float
+    cad: int | float
+    appet: int | float
+    pe: int | float
+    ane: int | float
+    result: str
 
 
 ENCODERS_BY_TYPE[PydanticObjectId] = str

@@ -6,25 +6,31 @@ import sys
 import numpy as np
 from keras.models import load_model
 
-from api.utility import response, document_filter
+from api.utility import document_filter, response
+from modules.dbconnect.models.breast_cancer import BreastCancerModel
+from modules.dbconnect.models.chronic_kidney import ChronicKidneyModel
 from modules.dbconnect.models.diabetics import DiabeticModel
+from modules.dbconnect.models.heart import HeartModel
+from modules.dbconnect.models.liver import LiverModel
 
 path = os.path.abspath(os.path.join(os.getcwd(), ""))
 sys.path.append(path)
 
 ####### Importing  Flask Component and required python lib ##################
 
-from flask import request, jsonify, Blueprint, Response
-from flask_api import status
-import logging
-from modules.diseases import chest_xray
-import cv2
 import json
+import logging
+
+import cv2
+from flask import Blueprint, Response, jsonify, request
+from flask_api import status
+
+from modules.diseases import chest_xray
+####### Importing responses from Disease Modules #########
+from modules.helper.support import get_disease_response
 
 ######## Importing Supporting Lib #################
 
-####### Importing responses from Disease Modules #########
-from modules.helper.support import get_disease_response
 
 ######## Creating Blueprint for all APIs #########
 
@@ -47,9 +53,6 @@ def chest_xrays():
         file_path = os.path.join(UPLOAD_FOLDER, filename)
         f.save(file_path)  # save image into upload folder
         # get predictions
-
-        # import pdb
-        # pdb.set_trace()
         host = request.headers.get('HOST')
 
         # Make prediction
@@ -125,20 +128,17 @@ def skin_cancer():
 
         return Response(json.dumps(skin_cancer_types[pred_index]), mimetype='application/json')
 
-    return None
+    elif request.method == "GET":
+        pass
 
 
-@disease_Blueprint.route('/disease', methods=['POST', "GET"])
-@response(DiabeticModel)
+@disease_Blueprint.route('/disease', methods=['POST'])
 def disease():
     """disease API 
 
     Returns:
         [JSON]: [disease Model result JSON]
     """
-    from app import db
-    if request.method == "GET":
-        return document_filter(db.diabetics)
 
     try:
         inputpayload = request.get_json(cache=False)
@@ -148,3 +148,63 @@ def disease():
         return jsonify(result), status.HTTP_201_CREATED
     except Exception as err:
         return jsonify(f"Module - Error - {err}"), status.HTTP_400_BAD_REQUEST
+
+
+@disease_Blueprint.route('/disease/diabetic', methods=["GET"])
+@response(DiabeticModel)
+def diabetic_api():
+    """diabetic GET endpoint
+
+        Returns:
+            [JSON]: [disease Model result JSON]
+    """
+    from app import db
+    return document_filter(db.diabetics)
+
+
+@disease_Blueprint.route('/disease/breast_cancer', methods=["GET"])
+@response(BreastCancerModel)
+def breast_cancer_api():
+    """Breast Cancer GET endpoint
+
+        Returns:
+            [JSON]: [disease Model result JSON]
+    """
+    from app import db
+    return document_filter(db.breast_cancer)
+
+
+@disease_Blueprint.route('/disease/kidney', methods=["GET"])
+@response(ChronicKidneyModel)
+def kidney_api():
+    """Chronic Kidney disease GET endpoint
+
+        Returns:
+            [JSON]: [disease Model result JSON]
+    """
+    from app import db
+    return document_filter(db.kidney)
+
+
+@disease_Blueprint.route('/disease/heart', methods=["GET"])
+@response(HeartModel)
+def heart_api():
+    """Heart disease GET endpoint
+
+        Returns:
+            [JSON]: [disease Model result JSON]
+    """
+    from app import db
+    return document_filter(db.heart)
+
+
+@disease_Blueprint.route('/disease/liver', methods=["GET"])
+@response(LiverModel)
+def liver_api():
+    """Liver disease GET endpoint
+
+        Returns:
+            [JSON]: [disease Model result JSON]
+    """
+    from app import db
+    return document_filter(db.liver)

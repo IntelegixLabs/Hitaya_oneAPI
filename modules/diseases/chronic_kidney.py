@@ -1,20 +1,20 @@
 ##########To add PYTHON PATH to make sure All Module Loads ########## 
 import os
 import sys
-path = os.path.abspath(os.path.join(os.getcwd(),"../"))
+
+from app import db
+from modules.dbconnect.models.chronic_kidney import ChronicKidneyModel
+
+path = os.path.abspath(os.path.join(os.getcwd(), "../"))
 sys.path.append(path)
 
 ####### Importing Library for Works ###########
-import logging
 
 ############ Import Constants Module ##############
-import APP_Constants as AC
-
 from modules.helper.support import get_classifier
 
 
 def get_response(diseaseparameter):
-
     classifier_chronic_kidney = get_classifier(disease="chronic_kidney")
     age = diseaseparameter["age"]
     bp = diseaseparameter["bp"]
@@ -43,10 +43,14 @@ def get_response(diseaseparameter):
 
     prediction = classifier_chronic_kidney.predict(
         [[age, bp, sg, al, su, rbc, pc, pcc, ba, bgr, bu, sc, sod, pot, hemo, pcv, wc, rc, htn, dm, cad, appet, pe,
-            ane]])
+          ane]])
 
     if prediction[0] == 1:
-        return_msg="Chronic Kidney Disease"
+        return_msg = "Chronic Kidney Disease"
     else:
-        return_msg="Not Chronic Kidney Disease"
+        return_msg = "Not Chronic Kidney Disease"
+    diseaseparameter["result"] = return_msg
+
+    kidney_data = ChronicKidneyModel(**diseaseparameter)
+    db.kidney.insert_one(kidney_data.dict())
     return return_msg

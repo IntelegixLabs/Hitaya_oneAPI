@@ -2,11 +2,11 @@ import functools
 import json
 
 from flask import Response, jsonify, request
+from flask_api import status
 
 
-def response(model, code=200):
-    """Create a response with given model.
-    """
+def response(model):
+    """Create a response with given model."""
 
     def decorator(func):
         """Decorator
@@ -17,9 +17,8 @@ def response(model, code=200):
 
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
+            code = status.HTTP_200_OK
             object_ = func(*args, **kwargs)
-            import pdb
-            pdb.set_trace()
 
             if isinstance(object_, tuple):
                 object_, code = object_
@@ -39,9 +38,6 @@ def response(model, code=200):
 
 
 def document_filter(collection):
-    filters = request.headers.get("x-filter")
-    if filters:
-        qs = collection.find(json.loads(filters))
-    else:
-        qs = collection.find()
-    return qs
+    if filters := request.headers.get("x-filter"):
+        return collection.find(json.loads(filters))
+    return collection.find()
